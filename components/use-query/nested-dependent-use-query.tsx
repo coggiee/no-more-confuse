@@ -8,7 +8,7 @@ import { Timing } from "@/types/timingType";
 import TimeChart from "../TimeChart";
 
 export default function NestedDependentUseQuery() {
-  const [result, setResult] = useState<any>(null);
+  const [result, setResult] = useState<Timing[] | null>(null);
 
   const { data } = useTrackedQuery({
     key: "parent",
@@ -24,6 +24,7 @@ export default function NestedDependentUseQuery() {
           name: "Parent",
           startTime: data.timing.startTime,
           endTime: data.timing.endTime,
+          duration: data.timing.duration,
         });
       }
 
@@ -32,6 +33,7 @@ export default function NestedDependentUseQuery() {
           name: "Child",
           startTime: timing.startTime,
           endTime: timing.endTime,
+          duration: timing.duration,
         });
       }
 

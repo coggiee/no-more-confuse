@@ -8,7 +8,7 @@ import { Timing } from "@/types/timingType";
 import TimeChart from "../TimeChart";
 
 export default function NestedUseQuery() {
-  const [result, setResult] = useState<any>(null);
+  const [result, setResult] = useState<Timing[] | null>(null);
 
   const { data } = useTrackedQuery({
     key: "parent",
@@ -24,6 +24,7 @@ export default function NestedUseQuery() {
           name: "Parent",
           startTime: data.timing.startTime,
           endTime: data.timing.endTime,
+          duration: data.timing.duration,
         });
       }
 
@@ -32,6 +33,7 @@ export default function NestedUseQuery() {
           name: "Child",
           startTime: timing.startTime,
           endTime: timing.endTime,
+          duration: timing.duration,
         });
       }
 
@@ -41,12 +43,14 @@ export default function NestedUseQuery() {
   );
 
   return (
-    <div>
+    <div className="w-[800px]">
       {result && <TimeChart data={result} />}
-      <div className="flex items-center gap-5">
-        {data && data?.timing && <Time title="Parent" timing={data.timing} />}
-        <Child onFetch={handleChildTiming} />
-      </div>
+      {data && data?.timing && (
+        <div className="flex items-center gap-5">
+          <Time title="Parent" timing={data.timing} />
+        </div>
+      )}
+      <Child onFetch={handleChildTiming} />
     </div>
   );
 }
