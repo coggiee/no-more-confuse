@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <main className="flex gap-5 h-full">
           <Menu />
-          <section className="container py-10 max-w-5xl space-y-5">
+          <section className="container py-10 max-w-7xl space-y-5">
             <Providers>
               <Callout />
               {children}

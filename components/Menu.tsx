@@ -45,7 +45,7 @@ export default function Menu() {
     <aside className="p-5 border-r h-full w-80">
       {links.map(({ category, items }) => (
         <div key={category}>
-          <h3 className="font-semibold text-lg font-geistmono mt-4 p-2">
+          <h3 className="font-black text-sm font-geistsans mt-4 p-2">
             {category}
           </h3>
           <ul className="flex flex-col gap-2">
