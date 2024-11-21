@@ -52,8 +52,8 @@ export default function Page() {
         <article className="space-y-2">
           <div>
             <p>
-              "@prisma/client"가 제공하는 PrismaClient는 서버에서만 접근이
-              가능하다.
+              &ldquo;@prisma/client&rdquo;가 제공하는 PrismaClient는 서버에서만
+              접근이 가능하다.
             </p>
             <p>
               NextJS에서 prisma에 접근해야 하고 다수의 데이터 패칭을 할 경우에는
