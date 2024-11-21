@@ -1,8 +1,7 @@
 "use client";
 
 import { useTrackedServerQuery } from "@/hooks/useTrackedQuery";
-import { serverAction } from "@/utils/serverAction";
-import React, { useEffect } from "react";
+import React from "react";
 import TimeChart from "../TimeChart";
 import Time from "../Time";
 
