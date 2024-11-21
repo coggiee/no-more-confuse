@@ -45,12 +45,10 @@ export default function NestedUseQuery() {
   return (
     <div>
       {result && <TimeChart data={result} />}
-      {data && data?.timing && (
-        <div className="flex items-center gap-5">
-          <Time title="Parent" timing={data.timing} />
-        </div>
-      )}
-      <Child onFetch={handleChildTiming} />
+      <div className="flex items-center gap-5">
+        {data && data?.timing && <Time title="Parent" timing={data.timing} />}
+        <Child onFetch={handleChildTiming} />
+      </div>
     </div>
   );
 }
