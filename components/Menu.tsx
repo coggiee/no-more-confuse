@@ -44,7 +44,9 @@ export default function Menu() {
   return (
     <aside className="sticky top-0 left-0 p-5 border-r h-full w-80">
       <header>
-        <h1 className="text-4xl">🫨 🔜 😄</h1>
+        <Link href="/" className="block">
+          <h1 className="text-4xl">🫨 🔜 😄</h1>
+        </Link>
       </header>
       {links.map(({ category, items }) => (
         <div key={category}>
@@ -54,7 +56,7 @@ export default function Menu() {
           <ul className="flex flex-col gap-2">
             {items.map(({ label, href }) => (
               <li
-                key={href} // href를 key로 사용
+                key={href}
                 className={cn(
                   "font-medium font-geistsans hover:bg-gray-100 text-sm p-2 rounded-lg text-gray-500",
                   pathname === href && "text-black"
