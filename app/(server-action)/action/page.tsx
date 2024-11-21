@@ -60,8 +60,8 @@ export default function Page() {
               어떻게 할까?
             </p>
             <p>
-              서버 액션은 "직렬 태스크 처리"이기 때문에 적합하지 않으므로,
-              이때는 route handler로 API route를 작성하자.
+              서버 액션은 &ldquo;직렬 태스크 처리&rdquo;이기 때문에 적합하지
+              않으므로, 이때는 route handler로 API route를 작성하자.
             </p>
           </div>
         </article>
