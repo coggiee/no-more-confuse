@@ -1,4 +1,5 @@
 import { getUser } from "@/utils/getUser";
+import { serverAction } from "@/utils/serverAction";
 import { useQueries, useQuery } from "@tanstack/react-query";
 
 type Query = {
@@ -28,4 +29,15 @@ export const useTrackedQueries = (queries: Queries) => {
   });
 
   return result;
+};
+
+export const useTrackedServerQuery = ({ key, endPoint }: Query) => {
+  const { data, isLoading, error, isPending } = useQuery({
+    queryKey: [key],
+    queryFn: () => serverAction(endPoint),
+  });
+
+  if (error) throw error;
+
+  return { data, isLoading, isPending };
 };
