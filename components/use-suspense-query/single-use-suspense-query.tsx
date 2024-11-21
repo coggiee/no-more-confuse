@@ -3,7 +3,7 @@
 import React from "react";
 import { useTrackedSuspenseQuery } from "@/hooks/useTrackedSuspenseQuery";
 import TimeChart from "../time-chart";
-import Time from "../Time";
+import Time from "../time";
 
 export default function SingleUseSuspenseQuery() {
   const { data } = useTrackedSuspenseQuery({

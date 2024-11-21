@@ -1,4 +1,4 @@
-import { Boundary } from "@/components/Boundary";
+import { Boundary } from "@/components/boundary";
 import SingleUseSuspenseQuery from "@/components/use-suspense-query/single-use-suspense-query";
 import React, { Suspense } from "react";
 

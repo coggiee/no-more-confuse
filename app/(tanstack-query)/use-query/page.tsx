@@ -1,4 +1,4 @@
-import { Boundary } from "@/components/Boundary";
+import { Boundary } from "@/components/boundary";
 import NestedDependentUseQuery from "@/components/use-query/nested-dependent-use-query";
 import NestedUseQuery from "@/components/use-query/nested-use-query";
 import SingleUseQuery from "@/components/use-query/single-use-query";

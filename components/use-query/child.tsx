@@ -1,6 +1,6 @@
 import { useTrackedQuery } from "@/hooks/useTrackedQuery";
 import React, { useEffect } from "react";
-import Time from "../Time";
+import Time from "../time";
 import { Timing } from "@/types/timingType";
 
 export default function Child({

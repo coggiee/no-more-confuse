@@ -3,7 +3,7 @@
 import { useTrackedQuery } from "@/hooks/useTrackedQuery";
 import React, { useCallback, useState } from "react";
 import Child from "./child";
-import Time from "../Time";
+import Time from "../time";
 import { Timing } from "@/types/timingType";
 import TimeChart from "../time-chart";
 

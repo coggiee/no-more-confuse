@@ -1,4 +1,4 @@
-import { Boundary } from "@/components/Boundary";
+import { Boundary } from "@/components/boundary";
 import SingleUseQueries from "@/components/use-query/single-use-queries";
 import React from "react";
 

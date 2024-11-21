@@ -3,7 +3,7 @@
 import { useTrackedQuery } from "@/hooks/useTrackedQuery";
 import React from "react";
 import TimeChart from "../time-chart";
-import Time from "../Time";
+import Time from "../time";
 
 export default function SingleUseQuery() {
   const { data } = useTrackedQuery({
