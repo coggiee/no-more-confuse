@@ -43,6 +43,9 @@ export default function Menu() {
 
   return (
     <aside className="p-5 border-r h-full w-80">
+      <header>
+        <h1 className="text-4xl">🫨 🔜 😄</h1>
+      </header>
       {links.map(({ category, items }) => (
         <div key={category}>
           <h3 className="font-black text-sm font-geistsans mt-4 p-2">
