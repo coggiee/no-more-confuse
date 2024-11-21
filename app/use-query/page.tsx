@@ -1,5 +1,5 @@
 import { Boundary } from "@/components/Boundary";
-import WaterfallChart from "@/components/WaterfallChart";
+import SingleUseQuery from "@/components/single-use-query";
 import React from "react";
 
 export default function Page() {
@@ -11,7 +11,7 @@ export default function Page() {
         </h1>
         <div>
           <Boundary labels={["useQuery + useQuery"]} size="small" width="fit">
-            <WaterfallChart />
+            <SingleUseQuery />
           </Boundary>
         </div>
       </div>

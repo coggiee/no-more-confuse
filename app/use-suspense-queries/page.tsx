@@ -1,5 +1,5 @@
 import { Boundary } from "@/components/Boundary";
-import MultipleSuspenseWaterfallChart from "@/components/MultipleSuspenseWaterfallChart";
+import SingleUseSuspenseQueries from "@/components/single-use-suspense-queries";
 import React, { Suspense } from "react";
 
 export default function Page() {
@@ -12,7 +12,7 @@ export default function Page() {
         <div>
           <Suspense fallback={<>Loading...</>}>
             <Boundary labels={["useSuspenseQueries"]} size="small" width="fit">
-              <MultipleSuspenseWaterfallChart />
+              <SingleUseSuspenseQueries />
             </Boundary>
           </Suspense>
         </div>

@@ -17,7 +17,7 @@ const queries = [
   },
 ];
 
-export default function MultipleWaterfallChart() {
+export default function SingleUseQueries() {
   const trackedQueries = useTrackedQueries(queries);
 
   const transformedTrackedData = React.useMemo(() => {

@@ -16,7 +16,7 @@ const queries = [
   },
 ];
 
-export default function MultipleSuspenseWaterfallChart() {
+export default function SingleUseSuspenseQueries() {
   const trackedQueries = useTrackedSuspenseQueries(queries);
 
   const transformedTrackedData = React.useMemo(() => {

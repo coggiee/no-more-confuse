@@ -5,7 +5,7 @@ import { useTrackedSuspenseQuery } from "@/hooks/useTrackedSuspenseQuery";
 import TimeChart from "./TimeChart";
 import Time from "./Time";
 
-export default function SuspenseWaterfallChart() {
+export default function SingleUseSuspenseQuery() {
   const { data } = useTrackedSuspenseQuery({
     key: "sample5",
     endPoint: "https://jsonplaceholder.typicode.com/users",

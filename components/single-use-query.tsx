@@ -5,7 +5,7 @@ import React from "react";
 import TimeChart from "./TimeChart";
 import Time from "./Time";
 
-export default function WaterfallChart() {
+export default function SingleUseQuery() {
   const { data } = useTrackedQuery({
     key: "sample1",
     endPoint: "https://jsonplaceholder.typicode.com/users",

@@ -1,5 +1,5 @@
 import { Boundary } from "@/components/Boundary";
-import SuspenseWaterfallChart from "@/components/SuspenseWaterfallChart";
+import SingleUseSuspenseQuery from "@/components/single-use-suspense-query";
 import React, { Suspense } from "react";
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
               size="small"
               width="fit"
             >
-              <SuspenseWaterfallChart />
+              <SingleUseSuspenseQuery />
             </Boundary>
           </Suspense>
         </div>
