@@ -32,7 +32,7 @@ const links = [
     items: [
       {
         label: "server action",
-        href: "/server-action",
+        href: "/action",
       },
     ],
   },

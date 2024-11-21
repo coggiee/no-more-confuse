@@ -42,7 +42,7 @@ export default function SingleUseSuspenseQuery() {
   }, [timing, timing2]);
 
   return (
-    <div className="w-[800px]">
+    <div>
       {timing && timing2 && (
         <>
           <TimeChart data={transformedData} />

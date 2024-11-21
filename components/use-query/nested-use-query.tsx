@@ -43,7 +43,7 @@ export default function NestedUseQuery() {
   );
 
   return (
-    <div className="w-[800px]">
+    <div>
       {result && <TimeChart data={result} />}
       {data && data?.timing && (
         <div className="flex items-center gap-5">

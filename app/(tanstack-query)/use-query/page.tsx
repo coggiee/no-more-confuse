@@ -18,7 +18,6 @@ export default function Page() {
             <Boundary
               labels={["useQuery + useQuery"]}
               size="small"
-              width="default"
             >
               <SingleUseQuery />
             </Boundary>
@@ -41,7 +40,6 @@ export default function Page() {
             <Boundary
               labels={["Dependent useQuery"]}
               size="small"
-              width="default"
             >
               <NestedDependentUseQuery />
             </Boundary>
@@ -59,7 +57,6 @@ export default function Page() {
             <Boundary
               labels={["Non-Dependent useQuery"]}
               size="small"
-              width="default"
             >
               <NestedUseQuery />
             </Boundary>

@@ -34,9 +34,9 @@ export default function SingleUseSuspenseQueries() {
       })
       .filter(Boolean); // null 값 제거
   }, [trackedQueries]);
-  console.log(transformedTrackedData);
+
   return (
-    <div className="w-[800px]">
+    <div>
       {transformedTrackedData.length > 0 && (
         <>
           <TimeChart data={transformedTrackedData} />

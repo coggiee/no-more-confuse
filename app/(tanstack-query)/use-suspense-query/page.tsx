@@ -17,6 +17,7 @@ export default function Page() {
               <Boundary
                 labels={["useSuspenseQuery + useSuspenseQuery"]}
                 size="small"
+                width="default"
               >
                 <SingleUseSuspenseQuery />
               </Boundary>
