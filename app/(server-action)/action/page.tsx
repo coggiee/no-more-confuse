@@ -38,7 +38,7 @@ export default function Page() {
             </p>
             <p>
               보시다시피, 각 작업은 병렬이 아닌 하나의 작업이 끝나고 다른 작업이
-              수행되는 "직렬 태스크 처리"가 진행된다.
+              수행되는 &ldquo;직렬 태스크 처리&rdquo;가 진행된다.
             </p>
           </div>
         </article>
