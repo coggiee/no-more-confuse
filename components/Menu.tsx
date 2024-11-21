@@ -42,7 +42,7 @@ export default function Menu() {
   const pathname = usePathname();
 
   return (
-    <aside className="p-5 border-r h-full w-80">
+    <aside className="sticky top-0 left-0 p-5 border-r h-full w-80">
       <header>
         <h1 className="text-4xl">🫨 🔜 😄</h1>
       </header>

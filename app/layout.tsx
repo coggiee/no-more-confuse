@@ -30,9 +30,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-dvh font-geistsans`}
       >
-        <main className="flex gap-5 h-full">
+        <main className="flex gap-5 h-full relative">
           <Menu />
-          <section className="container py-10 max-w-7xl">
+          <section className="container py-10 max-w-7xl overflow-y-scroll overscroll-y-none">
             <Providers>{children}</Providers>
           </section>
         </main>
