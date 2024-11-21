@@ -5,7 +5,7 @@ import React, { useCallback, useState } from "react";
 import Child from "./child";
 import Time from "../Time";
 import { Timing } from "@/types/timingType";
-import TimeChart from "../TimeChart";
+import TimeChart from "../time-chart";
 
 export default function NestedDependentUseQuery() {
   const [result, setResult] = useState<Timing[] | null>(null);

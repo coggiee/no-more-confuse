@@ -1,5 +1,5 @@
 import { Boundary } from "@/components/Boundary";
-import SingleUseSuspenseQuery from "@/components/single-use-suspense-query";
+import SingleUseSuspenseQuery from "@/components/use-suspense-query/single-use-suspense-query";
 import React, { Suspense } from "react";
 
 export default function Page() {

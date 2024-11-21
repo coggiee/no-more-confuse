@@ -1,5 +1,5 @@
 import { Boundary } from "@/components/Boundary";
-import SingleUseQueries from "@/components/single-use-queries";
+import SingleUseQueries from "@/components/use-query/single-use-queries";
 import React from "react";
 
 export default function Page() {

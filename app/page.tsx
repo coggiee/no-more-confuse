@@ -1,4 +1,4 @@
-import Callout from "@/components/Callout";
+import Callout from "@/components/callout";
 import Link from "next/link";
 
 const links = [

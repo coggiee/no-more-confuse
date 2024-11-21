@@ -3,8 +3,8 @@
 import { useTrackedQueries } from "@/hooks/useTrackedQuery";
 import React from "react";
 
-import TimeChart from "./TimeChart";
-import Time from "./Time";
+import TimeChart from "../time-chart";
+import Time from "../Time";
 
 const queries = [
   {

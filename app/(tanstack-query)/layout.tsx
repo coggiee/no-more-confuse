@@ -1,5 +1,5 @@
 import "../globals.css";
-import Callout from "@/components/Callout";
+import Callout from "@/components/callout";
 
 export default function Layout({
   children,
