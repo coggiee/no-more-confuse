@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Providers from "./providers";
 import Menu from "@/components/Menu";
+import Callout from "@/components/Callout";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,8 +33,11 @@ export default function RootLayout({
       >
         <main className="flex gap-5 h-full">
           <Menu />
-          <section className="container py-10">
-            <Providers>{children}</Providers>
+          <section className="container py-10 max-w-5xl space-y-5">
+            <Providers>
+              <Callout />
+              {children}
+            </Providers>
           </section>
         </main>
       </body>

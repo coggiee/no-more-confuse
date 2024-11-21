@@ -37,7 +37,7 @@ export default function SingleUseQueries() {
   }, [trackedQueries]);
 
   return (
-    <div className="w-[800px]">
+    <div>
       {transformedTrackedData.length > 0 && (
         <>
           <TimeChart data={transformedTrackedData} />

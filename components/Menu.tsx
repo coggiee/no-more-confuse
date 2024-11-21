@@ -7,20 +7,34 @@ import React from "react";
 
 const links = [
   {
-    label: "useQuery",
-    href: "/use-query",
+    category: "tanstack-query",
+    items: [
+      {
+        label: "useQuery",
+        href: "/use-query",
+      },
+      {
+        label: "useQueries",
+        href: "/use-queries",
+      },
+      {
+        label: "useSuspenseQuery",
+        href: "/use-suspense-query",
+      },
+      {
+        label: "useSuspenseQueries",
+        href: "/use-suspense-queries",
+      },
+    ],
   },
   {
-    label: "useQueries",
-    href: "/use-queries",
-  },
-  {
-    label: "useSuspenseQuery",
-    href: "/use-suspense-query",
-  },
-  {
-    label: "useSuspenseQueries",
-    href: "/use-suspense-queries",
+    category: "server action",
+    items: [
+      {
+        label: "server action",
+        href: "/server-action",
+      },
+    ],
   },
 ];
 
@@ -29,21 +43,28 @@ export default function Menu() {
 
   return (
     <aside className="p-5 border-r h-full w-80">
-      <ul className="flex flex-col gap-2">
-        {links.map(({ label, href }) => (
-          <li
-            key={label}
-            className={cn(
-              "font-medium font-geistsans hover:bg-gray-100 text-base p-2 rounded-lg text-gray-500",
-              pathname === href && "text-black"
-            )}
-          >
-            <Link href={href} className="block">
-              {label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {links.map(({ category, items }) => (
+        <div key={category}>
+          <h3 className="font-semibold text-lg font-geistmono mt-4 p-2">
+            {category}
+          </h3>
+          <ul className="flex flex-col gap-2">
+            {items.map(({ label, href }) => (
+              <li
+                key={href} // href를 key로 사용
+                className={cn(
+                  "font-medium font-geistsans hover:bg-gray-100 text-sm p-2 rounded-lg text-gray-500",
+                  pathname === href && "text-black"
+                )}
+              >
+                <Link href={href} className="block">
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </aside>
   );
 }

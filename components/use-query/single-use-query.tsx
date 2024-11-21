@@ -2,8 +2,8 @@
 
 import { useTrackedQuery } from "@/hooks/useTrackedQuery";
 import React from "react";
-import TimeChart from "./TimeChart";
-import Time from "./Time";
+import TimeChart from "../TimeChart";
+import Time from "../Time";
 
 export default function SingleUseQuery() {
   const { data } = useTrackedQuery({
@@ -43,7 +43,7 @@ export default function SingleUseQuery() {
   }, [timing, timing2]);
 
   return (
-    <div className="w-[800px]">
+    <div>
       {timing && timing2 && (
         <>
           <TimeChart data={transformedData} />
