@@ -1,42 +1,10 @@
 "use client";
 
+import { links } from "@/constants/menu-link";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-
-const links = [
-  {
-    category: "tanstack-query",
-    items: [
-      {
-        label: "useQuery",
-        href: "/use-query",
-      },
-      {
-        label: "useQueries",
-        href: "/use-queries",
-      },
-      {
-        label: "useSuspenseQuery",
-        href: "/use-suspense-query",
-      },
-      {
-        label: "useSuspenseQueries",
-        href: "/use-suspense-queries",
-      },
-    ],
-  },
-  {
-    category: "server action",
-    items: [
-      {
-        label: "server action",
-        href: "/action",
-      },
-    ],
-  },
-];
 
 export default function Menu() {
   const pathname = usePathname();
