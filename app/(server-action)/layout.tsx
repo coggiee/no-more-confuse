@@ -7,7 +7,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="space-y-5">
+    <main className="space-y-5 pb-10">
       <Callout>
         <p>
           Server Action은 서버 측 상태를 업데이트하는 mutation을 위해

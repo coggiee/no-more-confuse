@@ -24,6 +24,9 @@ export default function Layout({
           </p>
           <p>이때는 새로고침을 해주세요.</p>
         </div>
+        <div>
+          코드는 흐름 참고용으로만 사용해 주세요.
+        </div>
       </Callout>
       {children}
     </main>
