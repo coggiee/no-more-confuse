@@ -46,8 +46,11 @@ export default function Page() {
             </div>
           </Article.Description>
           <Callout>
-            즉, refetchOnMount가 false라도 gcTime이 지나고 다시 마운트를 한다면
-            자동으로 리페칭이 발생한다.
+            <p>
+              refetchOnMount가 false라도 gcTime이 지나고 다시 마운트를 한다면
+              자동으로 리페칭이 발생한다.
+            </p>
+            <p>즉, 자동 리페칭 refetchOnMount: false 에서 데이터(쿼리)가 존재하지 않을 때 발생하는 것이며, 쿼리가 어떤 상태(stale, fresh)로든 존재한다면 발생하지 않는다.</p>
           </Callout>
         </Article.Content>
       </Article.Body>
