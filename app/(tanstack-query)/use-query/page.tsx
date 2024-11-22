@@ -1,5 +1,6 @@
 import { Article } from "@/components/article";
 import { Boundary } from "@/components/boundary";
+import CustomIframe from "@/components/custom-iframe";
 import NestedDependentUseQuery from "@/components/use-query/nested-dependent-use-query";
 import NestedUseQuery from "@/components/use-query/nested-use-query";
 import SingleUseQuery from "@/components/use-query/single-use-query";
@@ -11,6 +12,9 @@ export default function Page() {
       <Article.Body>
         <Article.Title>within Single Component</Article.Title>
         <Article.Content>
+          <div>
+            <CustomIframe src="https://stackblitz.com/edit/tanstack-query-dm673x?embed=1&file=src%2Findex.tsx" />
+          </div>
           <div className="flex flex-col gap-3 bg-gray-100 rounded-xl p-5 py-10">
             <Boundary labels={["useQuery + useQuery"]} size="small">
               <SingleUseQuery />
@@ -26,6 +30,9 @@ export default function Page() {
         <Article.Title>within Nested Component</Article.Title>
         <Article.Content>
           <Article.Subtitle>Dependent Query</Article.Subtitle>
+          <div>
+            <CustomIframe src="https://stackblitz.com/edit/tanstack-query-yopb4f?embed=1&file=src%2Findex.tsx" />
+          </div>
           <div className="flex flex-col gap-3 bg-gray-100 rounded-xl p-5 py-10">
             <Boundary labels={["Dependent useQuery"]} size="small">
               <NestedDependentUseQuery />
@@ -38,6 +45,9 @@ export default function Page() {
         </Article.Content>
         <Article.Content>
           <Article.Subtitle>Non-Dependent Query</Article.Subtitle>
+          <div>
+            <CustomIframe src="https://stackblitz.com/edit/tanstack-query-fmnxpq?embed=1&file=src%2Findex.tsx" />
+          </div>
           <div className="flex flex-col gap-3 bg-gray-100 rounded-xl p-5 py-10">
             <Boundary labels={["Non-Dependent useQuery"]} size="small">
               <NestedUseQuery />
