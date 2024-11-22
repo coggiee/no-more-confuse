@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         <main className="flex gap-5 h-full relative">
           <Menu />
-          <section className="container py-10 max-w-7xl overflow-y-scroll overscroll-y-none [&::-webkit-scrollbar]:hidden">
+          <section className="container py-10 max-w-7xl [&::-webkit-scrollbar]:hidden">
             <Providers>{children}</Providers>
           </section>
         </main>

@@ -7,7 +7,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="space-y-5">
+    <main className="space-y-5 pb-10">
       <Callout>
         <div>
           <p>
