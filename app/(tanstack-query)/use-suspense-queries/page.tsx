@@ -1,17 +1,14 @@
+import { Article } from "@/components/article";
 import { Boundary } from "@/components/boundary";
 import SingleUseSuspenseQueries from "@/components/use-suspense-query/single-use-suspense-queries";
 import React, { Suspense } from "react";
 
 export default function Page() {
   return (
-    <div>
-      <div className="space-y-10">
-        <header>
-          <h1 className="font-black font-geistsans text-2xl">
-            within Single Component
-          </h1>
-        </header>
-        <article className="space-y-5">
+    <Article>
+      <Article.Body>
+        <Article.Title>within Single Component</Article.Title>
+        <Article.Content>
           <div className="flex flex-col gap-3 bg-gray-100 rounded-xl p-5 py-10">
             <Suspense fallback={<>Loading...</>}>
               <Boundary labels={["useSuspenseQueries"]} size="small">
@@ -19,7 +16,7 @@ export default function Page() {
               </Boundary>
             </Suspense>
           </div>
-          <div>
+          <Article.Description>
             <p>
               useSuspenseQueries는 queries에 여러 개의 쿼리를 하나의 배열로
               묶어서 전달한다.
@@ -33,9 +30,9 @@ export default function Page() {
               사용하는게 성능면에서 좋다. (단, 각 쿼리가 서로 독립적이어야
               한다.)
             </p>
-          </div>
-        </article>
-      </div>
-    </div>
+          </Article.Description>
+        </Article.Content>
+      </Article.Body>
+    </Article>
   );
 }
