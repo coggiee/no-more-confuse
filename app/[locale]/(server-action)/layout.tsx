@@ -3,14 +3,16 @@ import "../globals.css";
 import Callout from "@/components/callout";
 import { useTranslation } from "@/i18n";
 
+type Params = Promise<{ locale: string }>;
+
 export default async function Layout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Params;
 }>) {
-  const { locale } = params;
+  const { locale } = await params;
   const { t } = await useTranslation(locale, "nextjs");
 
   return (
