@@ -8,14 +8,16 @@ export async function generateStaticParams() {
   return languages.map((lang) => ({ locale: lang }));
 }
 
+type Params = Promise<{ locale: string }>;
+
 export default async function Layout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Params;
 }>) {
-  const { locale } = params;
+  const { locale } = await params;
   const { t } = await useTranslation(locale, "tanstack-query");
 
   return (

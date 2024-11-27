@@ -27,14 +27,16 @@ export async function generateStaticParams() {
   return languages.map((lang) => ({ locale: lang }));
 }
 
-export default function RootLayout({
+type Params = Promise<{ locale: string }>;
+
+export default async function RootLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Params;
 }>) {
-  const { locale } = params;
+  const { locale } = await params;
 
   return (
     <html lang={locale} dir={dir(locale)}>

@@ -3,11 +3,10 @@ import { links } from "@/constants/menu-link";
 import { useTranslation } from "@/i18n";
 import Link from "next/link";
 
-export default async function Page({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
+type Params = Promise<{ locale: string }>;
+
+export default async function Page({ params }: { params: Params }) {
+  const { locale } = await params;
   const { t } = await useTranslation(locale, "link");
 
   return (

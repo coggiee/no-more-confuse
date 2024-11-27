@@ -5,8 +5,10 @@ import SingleUseSuspenseQueries from "@/components/use-suspense-query/single-use
 import { useTranslation } from "@/i18n";
 import React, { Suspense } from "react";
 
-export default async function Page({ params }: { params: { locale: string } }) {
-  const { locale } = params;
+type Params = Promise<{ locale: string }>;
+
+export default async function Page({ params }: { params: Params }) {
+  const { locale } = await params;
   const { t } = await useTranslation(locale, "use-suspense-query");
 
   return (
