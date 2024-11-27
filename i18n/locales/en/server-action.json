@@ -1,0 +1,11 @@
+{
+    "sequential-task-handling": {
+      "title": "Sequential Task Handling",
+      "content": "Calling multiple useQueries, or using useQueries, each query is processed in parallel.\nHowever, if Server Action is used together, each query is not processed in parallel.\nI don't know if NextJS's intention, but since it was designed for the purpose of a kind of mutation to update the status of the server, it's not recommended for importing data and only does one thing at a time.\nAbove is the result of using multiple useQuery with Server Action.\n As you can see, each task is not parallel, but serial task processing in which one task ends and the other is performed."
+    },
+    "prisma-client": {
+      "title": "When you use Prisma Client",
+      "content": "The Prisma Client provided by the @prisma/client is accessible only from the server.\nWhat if NextJS needs to access prisma and has multiple data patches?\nServer action is not appropriate because it is serial task processing, so let's write an API route with the route handler in this case."
+    }
+  }
+  

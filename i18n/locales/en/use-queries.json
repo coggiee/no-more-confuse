@@ -1,0 +1,7 @@
+{
+    "single-query": {
+      "title": "Single Component",
+      "content": "useQueries forwards multiple queries into a single array.\nAll queries are processed in parallel, just like several useQuery calls."
+    }
+  }
+  

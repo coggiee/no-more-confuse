@@ -1,6 +1,5 @@
 type Item = {
-  label: string;
-  desc: string;
+  key: string;
   href: string;
 };
 
@@ -14,38 +13,32 @@ export const links: Link[] = [
     category: "tanstack-query",
     items: [
       {
-        label: "useQuery",
-        desc: "의존성 쿼리, 중첩 컴포넌트 구조 관점에서 살펴 봅니다.",
+        key: "useQuery",
         href: "/use-query",
       },
       {
-        label: "useQueries",
-        desc: "여러 개의 useQuery를 더 효율적으로 사용해 봅시다.",
+        key: "useQueries",
         href: "/use-queries",
       },
       {
-        label: "useSuspenseQuery",
-        desc: "Suspense의 정의에 유의하여 살펴 봅니다.",
+        key: "useSuspenseQuery",
         href: "/use-suspense-query",
       },
       {
-        label: "useSuspenseQueries",
-        desc: "여러 개의 useSuspenseQuery를 더 효율적으로 사용해 봅시다.",
+        key: "useSuspenseQueries",
         href: "/use-suspense-queries",
       },
       {
-        label: "refetch option",
-        desc: "refetch의 발생 조건은 언제일까?",
+        key: "refetchOption",
         href: "/refetch-option",
       },
     ],
   },
   {
-    category: "server action",
+    category: "next-js",
     items: [
       {
-        label: "server action",
-        desc: "서버 액션은 병렬 처리가 안됩니다.",
+        key: "serverAction",
         href: "/action",
       },
     ],

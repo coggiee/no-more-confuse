@@ -1,0 +1,32 @@
+{
+  "categories": {
+    "tanstack-query": "TanStack Query",
+    "next-js": "NextJS"
+  },
+  "items": {
+    "useQuery": {
+      "label": "useQuery",
+      "desc": "의존성 쿼리, 중첩 컴포넌트 구조 관점에서 살펴 봅니다."
+    },
+    "useQueries": {
+      "label": "useQueries",
+      "desc": "여러 개의 useQuery를 더 효율적으로 사용해 봅시다."
+    },
+    "useSuspenseQuery": {
+      "label": "useSuspenseQuery",
+      "desc": "Suspense의 정의에 유의하여 살펴 봅니다."
+    },
+    "useSuspenseQueries": {
+      "label": "useSuspenseQueries",
+      "desc": "여러 개의 useSuspenseQuery를 더 효율적으로 사용해 봅시다."
+    },
+    "refetchOption": {
+      "label": "refetch option",
+      "desc": "refetch의 발생 조건은 언제일까?"
+    },
+    "serverAction": {
+      "label": "server action",
+      "desc": "서버 액션은 병렬 처리가 안됩니다."
+    }
+  }
+}

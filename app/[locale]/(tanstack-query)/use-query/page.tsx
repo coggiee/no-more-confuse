@@ -1,16 +1,21 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { Article } from "@/components/article";
 import { Boundary } from "@/components/boundary";
 import CustomIframe from "@/components/custom-iframe";
 import NestedDependentUseQuery from "@/components/use-query/nested-dependent-use-query";
 import NestedUseQuery from "@/components/use-query/nested-use-query";
 import SingleUseQuery from "@/components/use-query/single-use-query";
+import { useTranslation } from "@/i18n";
 import React from "react";
 
-export default function Page() {
+export default async function Page({ params }: { params: { locale: string } }) {
+  const { locale } = params;
+  const { t } = await useTranslation(locale, "use-query");
+
   return (
     <Article>
       <Article.Body>
-        <Article.Title>within Single Component</Article.Title>
+        <Article.Title>{t(`single-query.title`)}</Article.Title>
         <Article.Content>
           <div>
             <CustomIframe src="https://stackblitz.com/edit/tanstack-query-dm673x?embed=1&file=src%2Findex.tsx" />
@@ -21,15 +26,20 @@ export default function Page() {
             </Boundary>
           </div>
           <Article.Description>
-            하나의 컴포넌트 내에서 useQuery를 여러 개 사용할 경우, 병렬로
-            처리된다.
+            {t(`single-query.content`)
+              .split("\n")
+              .map((item, index) => (
+                <p key={index}>{item}</p>
+              ))}
           </Article.Description>
         </Article.Content>
       </Article.Body>
       <Article.Body className="pt-10">
-        <Article.Title>within Nested Component</Article.Title>
+        <Article.Title>{t(`multiple-query.title`)}</Article.Title>
         <Article.Content>
-          <Article.Subtitle>Dependent Query</Article.Subtitle>
+          <Article.Subtitle>
+            {t(`multiple-query.items.dependent-query.title`)}
+          </Article.Subtitle>
           <div>
             <CustomIframe src="https://stackblitz.com/edit/tanstack-query-yopb4f?embed=1&file=src%2Findex.tsx" />
           </div>
@@ -39,12 +49,17 @@ export default function Page() {
             </Boundary>
           </div>
           <Article.Description>
-            자식 컴포넌트가 부모 컴포넌트의 쿼리 데이터에 의존한다면, 두 쿼리는
-            순서대로 처리된다.
+            {t(`multiple-query.items.dependent-query.content`)
+              .split("\n")
+              .map((item, index) => (
+                <p key={index}>{item}</p>
+              ))}
           </Article.Description>
         </Article.Content>
         <Article.Content>
-          <Article.Subtitle>Non-Dependent Query</Article.Subtitle>
+          <Article.Subtitle>
+            {t(`multiple-query.items.non-dependent-query.title`)}
+          </Article.Subtitle>
           <div>
             <CustomIframe src="https://stackblitz.com/edit/tanstack-query-fmnxpq?embed=1&file=src%2Findex.tsx" />
           </div>
@@ -54,14 +69,11 @@ export default function Page() {
             </Boundary>
           </div>
           <Article.Description>
-            <p>
-              중첩 컴포넌트 구조여도, 자식 컴포넌트의 쿼리가 부모 컴포넌트의
-              쿼리 데이터에 의존하지 않는다면, 두 쿼리는 병렬로 처리된다.
-            </p>
-            <p>
-              즉, 하나의 컴포넌트에서 여러 개의 useQuery를 사용하는 것과
-              동일하다.
-            </p>
+            {t(`multiple-query.items.non-dependent-query.content`)
+              .split("\n")
+              .map((item, index) => (
+                <p key={index}>{item}</p>
+              ))}
           </Article.Description>
         </Article.Content>
       </Article.Body>

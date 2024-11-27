@@ -1,0 +1,22 @@
+{
+  "refetchOnMount": {
+    "title": "refetchOnMount의 값이 false라면",
+    "content": "refetchOnMount의 값이 false라면, 컴포넌트가 마운트 됐을 때 자동으로 리페칭을 하지 않는다.\n과연 무조건 리페칭을 하지 않는 것일까?\n위 예제에서 staleTime, gcTime, refetchOnMount는 각각 3000, 5000, false 이다.\n쿼리는 처음에 fresh 상태였다가 3초가 지나면, stale 상태가 된다.",
+    "items": {
+      "before": {
+        "title": "gcTime 측정 이전",
+        "content": "컴포넌트를 언마운트하고 gcTime이 지나기 전에 다시 마운트하면, 쿼리는 여전히 stale 함을 볼 수 있다."
+      },
+      "after": {
+        "title": "gcTime 측정 이후",
+        "content": "gcTime이 지난 후에 컴포넌트를 다시 마운트하면, refetchOnMount가 false 임에도 불구하고 자동으로 리페칭이 발생한다."
+      }
+    },
+    "callout": "refetchOnMount가 false라도 gcTime이 지나고 다시 마운트를 한다면 자동으로 리페칭이 발생한다.\n즉, 자동 리페칭 refetchOnMount: false 에서 데이터(쿼리)가 존재하지 않을 때 발생하는 것이며, 쿼리가 어떤 상태(stale, fresh)로든 존재한다면 발생하지 않는다."
+  },
+  "gcTime": {
+    "title": "gcTime은 언제 측정될까?",
+    "content": "gcTime은 데이터가 오래된(stale)한 상태가 된 이후에 측정되는 시간이 아니다.\n데이터가 사용되지 않는(inactive) 상태가 된 이후에 측정되는 시간이다.",
+    "callout": "만약, 데이터가 오래된 상태가 된 이후에 측정되는 시간이라면, 데이터가 stale 상태가 된 이후에 5초가 지나면 메모리에서 사라져야 하지만 그렇지 않음을 볼 수 있다."
+  }
+}

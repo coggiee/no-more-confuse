@@ -1,0 +1,6 @@
+{
+  "single-query": {
+    "title": "Single Component",
+    "content": "useSuspenseQuery does not perform the following tasks until the task is complete.\nThat is, within one component, multiple useSuspenseQuery are processed in order.\nTherefore, if used incorrectly, the waterfall may deepen, which may degrade performance."
+  }
+}

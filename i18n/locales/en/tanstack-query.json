@@ -1,0 +1,3 @@
+{
+  "title": "Even if the requests are processed in parallel, the start time of each request can be slightly different. For an accurate comparison, please check the start and end times of each request.\n All times are measured by the performance API. \nSo, if you spend longer on the previous page, the graph may not be expressed smoothly. Please refresh at this time. Please use the code only for flow reference."
+}

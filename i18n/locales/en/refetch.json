@@ -1,0 +1,22 @@
+{
+  "refetchOnMount": {
+    "title": "If refetchOnMount is false",
+    "content": "If the value of refetchOnMount is false, it does not automatically refetch when a component is mounted.\nIs it true that he doesn't repetching?\nIn the example above, staleTime, gcTime, and refetchOnMount are 3000, 5000, and false respectively.\nThe query was initially in a fresh state and then after 3 seconds, it becomes a stale state.",
+    "items": {
+      "before": {
+        "title": "Before gcTime setting",
+        "content": "If you unmount a component and mount it again before gcTime passes, you can still see that the query is still stale."
+      },
+      "after": {
+        "title": "After gcTime setting",
+        "content": "When a component is remounted after gcTime, refetchOnMount automatically refetches even though it is false."
+      }
+    },
+    "callout": "Even if refetchOnMount is false, if it mounts again after gcTime, it automatically refets.\nIn other words, it occurs when data (query) does not exist in auto refetchOnMount: false, and does not occur if the query exists in any state (stale, fresh)."
+  },
+  "gcTime": {
+    "title": "When will gcTime be measured?",
+    "content": "gcTime is not the time that is measured after the data has become stale.\nThis is the time measured after the data is in an inactive state.",
+    "callout": "If the data is measured after the old state, it can be seen that it should disappear from memory after 5 seconds after the data is in the stale state, but it is not."
+  }
+}

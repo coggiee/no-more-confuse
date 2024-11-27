@@ -1,0 +1,32 @@
+{
+  "categories": {
+    "tanstack-query": "TanStack Query",
+    "next-js": "NextJS"
+  },
+  "items": {
+    "useQuery": {
+      "label": "useQuery",
+      "desc": "Explore dependency queries from a nested component structure perspective."
+    },
+    "useQueries": {
+      "label": "useQueries",
+      "desc": "Let's use multiple useQuery hooks more efficiently."
+    },
+    "useSuspenseQuery": {
+      "label": "useSuspenseQuery",
+      "desc": "Let's examine it with attention to the definition of Suspense."
+    },
+    "useSuspenseQueries": {
+      "label": "useSuspenseQueries",
+      "desc": "Let's use multiple useSuspenseQuery hooks more efficiently."
+    },
+    "refetchOption": {
+      "label": "refetch option",
+      "desc": "When do refetch conditions occur?"
+    },
+    "serverAction": {
+      "label": "server action",
+      "desc": "Server actions cannot be processed in parallel."
+    }
+  }
+}

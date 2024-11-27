@@ -1,0 +1,19 @@
+{
+  "single-query": {
+    "title": "Single Component",
+    "content": "Multiple useQuery within my component is processed in parallel.\nThat is, it is processed asynchronously without waiting for one operation to be completed."
+  },
+  "multiple-query": {
+    "title": "Nested Component",
+    "items": {
+      "dependent-query": {
+        "title": "Dependent Query",
+        "content": "If the child component depends on the query data of the parent component, the two queries are processed in order."
+      },
+      "non-dependent-query": {
+        "title": "Non-Dependent Query",
+        "content": "Even with an overlapping component structure, if the query of the child component does not depend on the query data of the parent component, the two queries are processed in parallel.\nThat is, it is the same as using multiple useQueries in one component."
+      }
+    }
+  }
+}
