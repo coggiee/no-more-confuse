@@ -5,11 +5,8 @@ import ServerActionUseQuery from "@/components/server-action/server-action-use-q
 import { useTranslation } from "@/i18n";
 import React from "react";
 
-export default async function Page({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
+export default async function Page({ params }: { params: { locale: string }}) {
+  const { locale } = params;
   const { t } = await useTranslation(locale, "server-action");
 
   return (
